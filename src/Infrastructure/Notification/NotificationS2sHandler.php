@@ -30,12 +30,6 @@ class NotificationS2sHandler implements NotificationHandler
         return $result;
     }
 
-    public function isValid(?array $data): bool
-    {
-        $result = false;
-        return $result;
-    }
-
     public function isNewSubscriber(Notification $notification): bool
     {
         return $notification->getSubscriberId() && $notification->getSubscribedAt()
@@ -75,25 +69,5 @@ class NotificationS2sHandler implements NotificationHandler
             $notification->getAmount(),
             $notification->getResult()
         );
-    }
-
-    public function toJson(Notification $notification): string
-    {
-        return json_encode($this->toArray($notification));
-    }
-
-    public function toArray(Notification $notification): array
-    {
-        return [
-            'subscriber' => $notification->getSubscriberId(),
-            'email' => $notification->getEmail(),
-            'status' => $notification->getStatus(),
-            'subscribed_date' => $notification->getSubscribedAt(),
-            'unsubscribed_date' => $notification->getUnsubscribedAt(),
-            'transaction_id' => $notification->getTransactionId(),
-            'transaction_date' => $notification->getTransactionDate(),
-            'amount' => $notification->getAmount(),
-            'result' => $notification->getResult()
-        ];
     }
 }

@@ -7,6 +7,8 @@ class Notification
     const STATUS_ONLINE = 'ONLINE';
     const STATUS_DELETED = 'DELETED';
 
+    const CACHE_NOTIFICATION_KEY = 'NOTIFICATION:CACHE';
+
     /** @var int  */
     private $subscriberId;
 
@@ -101,5 +103,25 @@ class Notification
     public function getResult(): ?string
     {
         return $this->result;
+    }
+
+    public function toArray(): array
+    {
+        return [
+            'subscriber'        => $this->subscriberId,
+            'email'             => $this->email,
+            'status'            => $this->status,
+            'subscribed_date'   => $this->subscribedAt,
+            'unsubscribed_date' => $this->unsubscribedAt,
+            'transaction_id'    => $this->transactionId,
+            'transaction_date'  => $this->transactionDate,
+            'amount'            => $this->amount,
+            'result'            => $this->result
+        ];
+    }
+
+    public function toJson(): string
+    {
+        return json_encode($this->toArray());
     }
 }

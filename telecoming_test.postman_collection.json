@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "5d843b64-c95f-4f53-b8f3-d177fc4b562e",
+		"name": "telecoming_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "notification_manager",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://dev.telecoming.es/",
+					"protocol": "http",
+					"host": [
+						"dev",
+						"telecoming",
+						"es"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Alta",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"subscriber\": 3423,\n    \"email\": \"delimce2@gmail.com\",\n    \"status\": \"ONLINE\",\n    \"subscribed_date\":\"2021-12-12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dev.telecoming.es/",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"telecoming",
+								"es"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Baja",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://dev.telecoming.es/",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"telecoming",
+								"es"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Pago",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"subscriber\": 3423,\n    \"transaction_id\":\"23445lk45l455\",\n    \"transaction_date\":\"2021-12-14\",\n    \"amount\":12.00,\n    \"result\":\"OK\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://dev.telecoming.es/",
+							"protocol": "http",
+							"host": [
+								"dev",
+								"telecoming",
+								"es"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
