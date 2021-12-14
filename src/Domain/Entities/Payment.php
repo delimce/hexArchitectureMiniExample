@@ -97,4 +97,16 @@ class Payment
     {
         $this->result = $result;
     }
+
+    public function toArray(): array
+    {
+        return [
+            'id'              => $this->id,
+            'subscriberId'    => $this->subscriberId,
+            'transactionId'   => $this->transactionId,
+            'transactionDate' => $this->transactionDate,
+            'amount'          => $this->amount,
+            'result'          => $this->result,
+        ];
+    }
 }

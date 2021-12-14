@@ -7,10 +7,10 @@ class Subscriber
     /** @var int  */
     private $id;
 
-    /** @var string */
+    /** @var string|null */
     private $email;
 
-    /** @var string */
+    /** @var string|null */
     private $status;
 
     /** @var double|null */
@@ -24,8 +24,8 @@ class Subscriber
 
     public function __construct(
         int $id,
-        string $email,
-        string $status,
+        ?string $email,
+        ?string $status,
         ?string $subscribedAt,
         ?string $unsubscribedAt
     ) {
@@ -46,7 +46,7 @@ class Subscriber
         $this->id = $id;
     }
 
-    public function getEmail(): string
+    public function getEmail(): ?string
     {
         return $this->email;
     }
@@ -56,7 +56,7 @@ class Subscriber
         $this->email = $email;
     }
 
-    public function getStatus(): string
+    public function getStatus(): ?string
     {
         return $this->status;
     }

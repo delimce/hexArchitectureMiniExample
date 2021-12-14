@@ -6,17 +6,21 @@ use App\Domain\Entities\Subscriber;
 
 interface SubscriberRepository
 {
+    /**
+     * @param Subscriber $subscriber
+     * @return bool
+     */
+    public function create(Subscriber $subscriber): bool;
 
     /**
      * @param Subscriber $subscriber
-     * @return void
+     * @return bool
      */
-    public function create(Subscriber $subscriber);
+    public function edit(Subscriber $subscriber):bool;
 
     /**
-     * @param Subscriber $subscriber
-     * @return void
+     * @param int $id
+     * @return Subscriber|null
      */
-    public function edit(Subscriber $subscriber);
- 
+    public function getById(int $id): ?Subscriber;
 }
