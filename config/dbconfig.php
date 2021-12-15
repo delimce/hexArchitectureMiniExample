@@ -1,8 +1,8 @@
 <?php
 
 $dbConfig = [
-    "DBHOST" => 'thinkpadev',
+    "DBHOST" => 'localhost',
     "DBNAME" => 'telecoming_db',
     "DBUSER" => 'root',
-    "DBPASSWORD" => 'delimce',
+    "DBPASSWORD" => '',
 ];
