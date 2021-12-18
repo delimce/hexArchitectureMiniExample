@@ -1,5 +1,8 @@
 # Hexagonal Architecture mini example using PHP programing language
 
+## Let's take a glance
+[![Go to the video!!](https://delimce.com/images/hearchitecture.png)](https://www.youtube.com/watch?v=iQE_XDJVAZA)
+
 ## Prerequisites
 - Docker engine
 - Mysql >= 5.7
