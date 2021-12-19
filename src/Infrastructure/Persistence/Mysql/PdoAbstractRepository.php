@@ -12,9 +12,8 @@ abstract class PdoAbstractRepository
 
     public function __construct()
     {
-        include __DIR__ . '/../../../../config/dbconfig.php';
-        $connectionUrl = sprintf('mysql:host=%s;dbname=%s', $dbConfig['DBHOST'], $dbConfig['DBNAME']);
-        $this->db = new PDO($connectionUrl, $dbConfig['DBUSER'], $dbConfig['DBPASSWORD']);
+        $connectionUrl = sprintf('mysql:host=%s;dbname=%s', $_ENV['DBHOST'], $_ENV['DBNAME']);
+        $this->db = new PDO($connectionUrl, $_ENV['DBUSER'], $_ENV['DBPASSWORD']);
     }
 
     /**

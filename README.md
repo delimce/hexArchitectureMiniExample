@@ -10,8 +10,9 @@
 ## Installation
     1. git clone git@github.com:delimce/hexArchitectureMiniExample.git
     2. docker-compose up
-    3. edit /etc/hosts file adding new entry -> 127.0.0.1   dev.telecoming.es
+    3. Edit /etc/hosts file adding new entry -> 127.0.0.1   dev.telecoming.es
     4. composer install
+    5. Rename file .env.example to .env and configure env vars
 
 
 

@@ -11,9 +11,8 @@ class CacheRedisHandler implements CacheHandler
 
     public function __construct()
     {
-        include __DIR__ . '/../../../config/cacheconfig.php';
         $this->redis = new \Redis();
-        $this->redis->connect($cacheService['CACHEHOST'], $cacheService['CACHEPORT']);
+        $this->redis->connect($_ENV['CACHEHOST'], $_ENV['CACHEPORT']);
     }
 
     public function setValue(string $key, string $value): void

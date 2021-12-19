@@ -9,6 +9,10 @@ use App\Infrastructure\Notification\NotificationS2sHandler;
 use App\Infrastructure\Persistence\Mysql\PaymentPdoRepository;
 use App\Infrastructure\Persistence\Mysql\SubscriberPdoRepository;
 
+# config Settings
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
+
 # dependencies
 $logger = new LogFileHandler();
 $notificationHandler = new NotificationS2sHandler();
