@@ -5,6 +5,7 @@
 
 ## Prerequisites
 - Docker engine
+- Docker compose
 - Mysql >= 5.7
 
 ## Installation
